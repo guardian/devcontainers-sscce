@@ -1,12 +1,18 @@
 {
   "name": "devcontainers-sscce",
-  "dockerComposeFile": "../docker-compose.yml",
-  "service": "hello",
+  "image" : "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "remoteUser" : "vscode",
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {
       "version": "latest",
       "moby": true,
       "dockerDashComposeVersion": "v2"
     }
-  }
+  },
+  "capAdd" : [
+    "SYS_ADMIN"
+  ],
+  "securityOpt" : [
+    "seccomp=unconfined"
+  ]
 }
