@@ -1,0 +1,12 @@
+{
+  "name": "devcontainers-sscce",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "hello",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "version": "latest",
+      "moby": true,
+      "dockerDashComposeVersion": "v2"
+    }
+  }
+}
